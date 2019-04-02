@@ -1,17 +1,4 @@
-.row {
-  width: 992px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 100px;
-}
-
-/* BLOCCO LEZIONI */
-#lezioni .row > .left, #lezioni .row > .right{
-  width: 50%;
-  float: left;
-}
-
-#lezioni .row img {
+#lezioni .container img {
   /* per centrare orizzontalmente */
   display: block;
   margin-right: auto;
@@ -22,14 +9,6 @@
   text-align: center;
 }
 
-/* BLOCCO STEPS */
-#steps .row > .left,
-#steps .row > .central,
-#steps .row > .right{
-  float: left;
-  width: 33%;
-}
-
 #steps{
   text-align: center;
 }
@@ -37,13 +16,6 @@
 /* BLOCCO PERCHE */
 #why {
   text-align: center;
-}
-
-#why .row > .first,
-#why .row > .second,
-#why .row > .third {
-  width: 100%;
-  margin-top: 80px;
 }
 
 #why .row img {
@@ -62,6 +34,265 @@ img{
   height: 200px;
 }
 
-.clear {
+/* .clear {
+  clear:both;
+} */
+
+
+/* start of framework */
+*{box-sizing: border-box;
+margin: 0;
+padding: 0;
+border: 1px solid red;
+}
+
+.container{
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+.container:after{
+  content: '';
+  display: table;
   clear:both;
 }
+
+.mt-60{
+  margin-top: 60px;
+}
+
+[class^="col-"]{
+  height: auto;
+  float: left;
+}
+
+/* COLONNE brutte
+.col-1{
+  width: calc((100%*1)/12);
+}
+.col-2{
+  width: calc((100%*2)/12);
+}
+.col-3{
+  width: calc((100%*3)/12);
+}
+.col-4{
+  width: calc((100%*4)/12);
+}
+.col-5{
+  width: calc((100%*5)/12);
+}
+.col-6{
+  width: calc((100%*6)/12);
+}
+.col-7{
+  width: calc((100%*7)/12);
+}
+.col-8{
+  width: calc((100%*8)/12);
+}
+.col-9{
+  width: calc((100%*9)/12);
+}
+.col-10{
+  width: calc((100%*10)/12);
+}
+.col-11{
+  width: calc((100%*11)/12);
+}
+.col-12{
+  width: calc((100%*12)/12);
+} */
+
+.col-offset-1{
+  margin-left: calc((100%/12)*1);
+}
+.col-offset-2{
+  margin-left: calc((100%/12)*2);
+}
+.col-offset-3{
+  margin-left: calc((100%/12)*3);
+}
+.col-offset-4{
+  margin-left: calc((100%/12)*4);
+}
+.col-offset-5{
+  margin-left: calc((100%/12)*5);
+}
+.col-offset-6{
+  margin-left: calc((100%/12)*6);
+}
+.col-offset-7{
+  margin-left: calc((100%/12)*7);
+}
+.col-offset-8{
+  margin-left: calc((100%/12)*8);
+}
+.col-offset-9{
+  margin-left: calc((100%/12)*9);
+}
+.col-offset-10{
+  margin-left: calc((100%/12)*10);
+}
+.col-offset-11{
+  margin-left: calc((100%/12)*11);
+}
+
+@media screen and (max-width:768px) {
+  .col-xs-1{
+    width: calc((100%*1)/12);
+  }
+  .col-xs-2{
+    width: calc((100%*2)/12);
+  }
+  .col-xs-3{
+    width: calc((100%*3)/12);
+  }
+  .col-xs-4{
+    width: calc((100%*4)/12);
+  }
+  .col-xs-5{
+    width: calc((100%*5)/12);
+  }
+  .col-xs-6{
+    width: calc((100%*6)/12);
+  }
+  .col-xs-7{
+    width: calc((100%*7)/12);
+  }
+  .col-xs-8{
+    width: calc((100%*8)/12);
+  }
+  .col-xs-9{
+    width: calc((100%*9)/12);
+  }
+  .col-xs-10{
+    width: calc((100%*10)/12);
+  }
+  .col-xs-11{
+    width: calc((100%*11)/12);
+  }
+  .col-xs-12{
+    width: calc((100%*12)/12);
+  }
+}
+
+@media screen and (min-width:760px) and (max-width:992px){
+.col-md-1{
+  width: calc((100%*1)/12);
+}
+.col-md-2{
+  width: calc((100%*2)/12);
+}
+.col-md-3{
+  width: calc((100%*3)/12);
+}
+.col-md-4{
+  width: calc((100%*4)/12);
+}
+.col-md-5{
+  width: calc((100%*5)/12);
+}
+.col-md-6{
+  width: calc((100%*6)/12);
+}
+.col-md-7{
+  width: calc((100%*7)/12);
+}
+.col-md-8{
+  width: calc((100%*8)/12);
+}
+.col-md-9{
+  width: calc((100%*9)/12);
+}
+.col-md-10{
+  width: calc((100%*10)/12);
+}
+.col-md-11{
+  width: calc((100%*11)/12);
+}
+.col-md-12{
+  width: calc((100%*12)/12);
+}
+}
+
+@media screen and (min-width:992px){
+.col-lg-1{
+  width: calc((100%*1)/12);
+}
+.col-lg-2{
+  width: calc((100%*2)/12);
+}
+.col-lg-3{
+  width: calc((100%*3)/12);
+}
+.col-lg-4{
+  width: calc((100%*4)/12);
+}
+.col-lg-5{
+  width: calc((100%*5)/12);
+}
+.col-lg-6{
+  width: calc((100%*6)/12);
+}
+.col-lg-7{
+  width: calc((100%*7)/12);
+}
+.col-lg-8{
+  width: calc((100%*8)/12);
+}
+.col-lg-9{
+  width: calc((100%*9)/12);
+}
+.col-lg-10{
+  width: calc((100%*10)/12);
+}
+.col-lg-11{
+  width: calc((100%*11)/12);
+}
+.col-lg-12{
+  width: calc((100%*12)/12);
+}
+}
+
+
+/* @media screen and (max-width:768px){
+
+.row {
+width: 80%;
+padding: 10px;
+
+  }
+#lezioni, #steps {
+  margin: 20px;
+}
+
+h1, h3 {
+  margin: 20px 0px;
+  width: 100%;
+}
+
+img {
+width: 100%;
+height: auto;
+padding-bottom: 20px;
+padding-top: 10px;
+display: none;
+}
+
+
+#lezioni .row > .right, #lezioni .row > .left, #steps .row > .right, #steps .row > .left, #steps .row > .central{
+width: 100%;
+}
+
+hr {
+  display: none;
+}
+
+#why .row .first{
+  display: none;
+}
+
+#why .row .first img{
+  display: contents;
+} */
